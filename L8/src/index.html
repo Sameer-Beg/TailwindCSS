@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+  <title>GSAP with Tailwind</title>
+</head>
+<body class="bg-black">
+  <section class="py-[100px]">
+    <div class="max-w-[1320px] mx-auto text-center">
+      <div>
+        <!-- Added a custom class "title" -->
+        <h2 class="title font-bold text-[20px] my-[20px] text-white">
+          Watch Everywhere
+        </h2>
+        <p class="subtitle text-white font-mono">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+        </p>
+      </div>
+      <div>
+        <img src="" alt="">
+      </div>
+    </div>
+  </section>
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>
+    gsap.from(".title", {
+      duration: 1,
+      y: 50,
+      opacity: 0,
+      ease: "power2.out"
+    });
+
+    gsap.from(".subtitle", {
+      duration: 1,
+      y: 30,
+      opacity: 0,
+      delay: 0.5,
+      ease: "power2.out"
+    });
+  </script>
+</body>
+</html>
